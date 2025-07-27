@@ -383,7 +383,6 @@ void MLX90640_CalculateTo(uint16_t *frameData, const paramsMLX90640 *params, flo
     }
 }
 
-//------------------------------------------------------------------------------
 
 void MLX90640_GetImage(uint16_t *frameData, const paramsMLX90640 *params, float *result)
 {
@@ -412,7 +411,6 @@ void MLX90640_GetImage(uint16_t *frameData, const paramsMLX90640 *params, float 
     ktaScale = pow(2,(double)params->ktaScale);
     kvScale = pow(2,(double)params->kvScale);
     
-//------------------------- Gain calculation -----------------------------------    
     gain = frameData[778];
     if(gain > 32767)
     {
@@ -488,7 +486,6 @@ void MLX90640_GetImage(uint16_t *frameData, const paramsMLX90640 *params, float 
     }
 }
 
-//------------------------------------------------------------------------------
 
 float MLX90640_GetVdd(uint16_t *frameData, const paramsMLX90640 *params)
 {
@@ -509,7 +506,6 @@ float MLX90640_GetVdd(uint16_t *frameData, const paramsMLX90640 *params)
     return vdd;
 }
 
-//------------------------------------------------------------------------------
 
 float MLX90640_GetTa(uint16_t *frameData, const paramsMLX90640 *params)
 {
@@ -539,7 +535,6 @@ float MLX90640_GetTa(uint16_t *frameData, const paramsMLX90640 *params)
     return ta;
 }
 
-//------------------------------------------------------------------------------
 
 int MLX90640_GetSubPageNumber(uint16_t *frameData)
 {
@@ -547,7 +542,6 @@ int MLX90640_GetSubPageNumber(uint16_t *frameData)
 
 }    
 
-//------------------------------------------------------------------------------
 void MLX90640_BadPixelsCorrection(uint16_t *pixels, float *to, int mode, paramsMLX90640 *params)
 {   
     float ap[4];
