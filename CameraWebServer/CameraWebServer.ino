@@ -3,7 +3,7 @@
 
 
 
-#define CAMERA_MODEL_AI_THINKER // Has PSRAM
+#define CAMERA_MODEL_AI_THINKER
 
 
 #include "camera_pins.h"
@@ -55,7 +55,7 @@ void setup() {
   pinMode(14, INPUT_PULLUP);
 #endif
 
-  // camera init
+
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
     Serial.printf("Camera init failed with error 0x%x", err);
@@ -94,6 +94,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
   delay(10000);
 }
